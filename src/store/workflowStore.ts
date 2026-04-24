@@ -28,14 +28,7 @@ interface WorkflowState {
   setSelectedNode: (nodeId: string | null) => void;
 }
 
-const initialNodes: WorkflowNode[] = [
-  {
-    id: 'start-1',
-    type: 'startNode',
-    position: { x: 250, y: 100 },
-    data: { title: 'Employee Onboarding' },
-  }
-];
+const initialNodes: WorkflowNode[] = [];
 
 export const useWorkflowStore = create<WorkflowState>((set, get) => ({
   nodes: initialNodes,

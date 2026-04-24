@@ -8,7 +8,7 @@ import { Play, CheckSquare, UserCheck, Zap, Flag } from 'lucide-react';import ty
   EndNodeData 
 } from '../../types/workflow';
 
-// --- 1. Start Node ---
+// Start Node
 export function StartNode({ data, selected }: NodeProps<StartNodeData>) {
   return (
     <div className={`px-4 py-3 shadow-sm rounded-lg bg-white border-2 min-w-[150px] ${selected ? 'border-blue-500' : 'border-green-400'}`}>
@@ -23,7 +23,7 @@ export function StartNode({ data, selected }: NodeProps<StartNodeData>) {
   );
 }
 
-// --- 2. Task Node ---
+// Task Node
 export function TaskNode({ data, selected }: NodeProps<TaskNodeData>) {
   return (
     <div className={`px-4 py-3 shadow-sm rounded-lg bg-white border-2 min-w-[180px] ${selected ? 'border-blue-500' : 'border-slate-200'}`}>
@@ -38,7 +38,7 @@ export function TaskNode({ data, selected }: NodeProps<TaskNodeData>) {
   );
 }
 
-// --- 3. Approval Node ---
+// Approval Node
 export function ApprovalNode({ data, selected }: NodeProps<ApprovalNodeData>) {
   return (
     <div className={`px-4 py-3 shadow-sm rounded-lg bg-white border-2 min-w-[180px] ${selected ? 'border-blue-500' : 'border-amber-300'}`}>
@@ -53,7 +53,7 @@ export function ApprovalNode({ data, selected }: NodeProps<ApprovalNodeData>) {
   );
 }
 
-// --- 4. Automated Step Node ---
+// Automated Step Node
 export function AutomatedNode({ data, selected }: NodeProps<AutomatedNodeData>) {
   return (
     <div className={`px-4 py-3 shadow-sm rounded-lg bg-white border-2 min-w-[180px] ${selected ? 'border-blue-500' : 'border-purple-300'}`}>
@@ -68,7 +68,7 @@ export function AutomatedNode({ data, selected }: NodeProps<AutomatedNodeData>) 
   );
 }
 
-// --- 5. End Node ---
+// End Node
 export function EndNode({ data, selected }: NodeProps<EndNodeData>) {
   return (
     <div className={`px-4 py-3 shadow-sm rounded-lg bg-white border-2 min-w-[150px] ${selected ? 'border-blue-500' : 'border-red-400'}`}>

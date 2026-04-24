@@ -15,7 +15,7 @@ export default function SimulationPanel() {
     setLogs([]);
     setErrors([]);
 
-    // --- 1. Client-Side Structural Validation ---
+    // Client-Side Structural Validation
     const localErrors: string[] = [];
     
     if (nodes.length === 0) {
@@ -44,9 +44,8 @@ export default function SimulationPanel() {
       return;
     }
 
-    // --- 2. Serialize and Send to API ---
+    // Serialize and Send to API 
     try {
-      // The payload serialization
       const graphPayload = { nodes, edges }; 
       
       const result = await mockApi.simulateWorkflow(graphPayload.nodes, graphPayload.edges);

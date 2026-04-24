@@ -14,7 +14,7 @@ export const mockApi = {
    * Returns a list of available system actions [cite: 107-114]
    */
   getAutomations: async (): Promise<AutomationAction[]> => {
-    await delay(400); // 400ms fake delay
+    await delay(400);
     return [
       { id: "send_email", label: "Send Email", params: ["to", "subject"] },
       { id: "generate_doc", label: "Generate Document", params: ["template", "recipient"] },
@@ -38,7 +38,7 @@ export const mockApi = {
         return { success: false, logs, errors: ["Workflow is completely empty."] };
     }
 
-    // Validation 2: Does it have a start node? [cite: 78]
+    // Validation 2: Does it have a start node?
     const startNode = nodes.find(n => n.type === 'startNode');
     if (!startNode) {
         return { success: false, logs, errors: ["Structural Error: Missing a Start Node."] };
